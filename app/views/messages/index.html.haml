@@ -1,0 +1,46 @@
+.header
+.body
+  .flash-box
+  .wrapper
+    = render "side_bar"
+    = render "main_chat"
+    .chat-side
+      .chat-header
+        .chat-header__box
+          %p.chat-header__box-name
+          %ul.chat-header__box-menu
+            %li.chat-header__box-menu__post
+              =link_to "#", class: "" do
+                = icon('far', 'edit', class: "chat-header__box-menu__post--icon")
+            %li.chat-header__box-menu__setting
+              =link_to "#", class: "" do
+                = icon('fas', 'cog', class: "chat-header__box-menu__setting--icon")
+      .groups
+        %p.groups__group-name
+          .groups__group-name__person
+          .groups__group-name__date
+        %p.groups__latest-message
+    .chat-main
+      .main-header
+        .main-header__left-box
+          .main-header__left-box__current-group
+          %ul.main-header__left-box__member-list
+            member:
+            %li.main-header__left-box__member-list__member
+        =link_to "#", class: "main-header__edit" do  
+          .main-header__edit-btn Edit
+      .messages
+        .messages__message
+          .messages__message__upper-info
+            %p.messages__message__upper-info__person
+            %p.messages__message__upper-info__date
+          .messages__message__text
+      .form
+        %form 
+          .form__new-message
+            .form__new-message__input-box
+              %input.form__new-message__input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text", :value => ""}/
+              %label.form__new-message__input-box__form-image
+                =icon('fa', 'image', class: "form__input-box__form-image__image")
+                %input{type: 'file', class: "form__new-message__input-box__form-image__file"}
+            %input.submit{type:'submit',class: "form__new-message__submit", value: "Send"}
