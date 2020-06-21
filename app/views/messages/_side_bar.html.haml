@@ -1,0 +1,25 @@
+.chat-side
+  .chat-header
+    %h3.header__name
+      = current_user.name
+    .chat-header__box
+      %p.chat-header__box-name
+      %ul.chat-header__box-menu
+        %li.chat-header__box-menu__post
+          =link_to new_group_path do 
+            = icon('far', 'edit', class: "chat-header__box-menu__post--icon")
+        %li.chat-header__box-menu__setting
+          =link_to edit_user_path(current_user) do 
+            = icon('fas', 'cog', class: "chat-header__box-menu__setting--icon")
+  .groups
+    -current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          %p.groups__group-name
+            .groups__group-name__person
+              =group.name
+            .groups__group-name__date
+          %p.groups__latest-message
+            メッセージはまだありません
+
+     
