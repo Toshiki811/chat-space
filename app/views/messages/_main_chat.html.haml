@@ -9,7 +9,6 @@
           = user.name
 
         %li.main-header__left-box__member-list__member
-          -# = group.user.names.each do |name|
     = link_to edit_group_path(@group), class: "main-header__edit" do
       .main-header__edit-btn 
         Edit
@@ -24,4 +23,3 @@
           = f.file_field :image, class: 'form__new-message__input-box__form-image__file'
       = f.submit 'Send', class: 'submit'
 
--#  class: 'form__new-message__input-box__form-image__image'
