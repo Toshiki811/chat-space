@@ -14,12 +14,12 @@
   .groups
     -current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group) do
-          %p.groups__group-name
-            .groups__group-name__person
+        = link_to group_messages_path(group), class: "groups__group"  do
+          %p.groups__group__group-name
+            .groups__group__group-name__person
               =group.name
             .groups__group-name__date
-          %p.groups__latest-message
+          %p.groups__group__latest-message
             =group.show_last_message
 
      

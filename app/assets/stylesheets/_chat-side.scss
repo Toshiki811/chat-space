@@ -41,18 +41,21 @@
   }
   .groups{
     height:calc(100vh - 100px);
-    background-color: #2f3e2f;
+    background-color: #2f3e51;
     padding: 20px 20px 0;
     margin-bottom: 40px;
-    &__group-name{
-      font-size: 15px;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    &__latest-message{
-      font-size: 11px;
-      font-weight: bold;
-      margin-bottom: 40px;
+    &__group{
+      color:white;
+      text-decoration: none;
+      &__group-name__person{
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: white;
+      }
+      &__latest-message{
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
     }
   }
 }

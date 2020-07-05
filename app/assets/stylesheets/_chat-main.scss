@@ -24,12 +24,16 @@
      }
     }
     &__edit{
-     color: #38ae38;
+     color: #38aef0;;
+     text-decoration: none;
      &-btn{
        height: 40px;
-       margin: 28px 20px;
+       margin: 28px;
+       padding: 0 20px;
        line-height: 40px;
        font-size: 16px;
+       right: 40px;
+       border: solid 1px #38aef0;
      }
     }
   }
@@ -63,7 +67,7 @@
   .form{
     background-color: #d2d2d2;
     height: 90px;
-    padding:10px 40px ;
+    padding:20px 40px ;
     &__new-message{
       display: flex;
       &__input-box{
@@ -76,6 +80,8 @@
         &__input{
           position: relative;
           width: 100%;
+          padding: 0px 10px;
+          border: none;
         }
         &__form-image{
           right: 10px;
